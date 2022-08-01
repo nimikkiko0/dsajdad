@@ -121,7 +121,7 @@ class MyEventHandler extends EventHandler
 
 
         yield $this->messages->sendMedia([
-            'peer' => '-1001645403038',
+            'peer' => '@failvids',
             'media' => [
                 '_' => 'inputMediaUploadedDocument',
                 'file' => 'output.mp4',
@@ -130,7 +130,7 @@ class MyEventHandler extends EventHandler
                     ['_' => 'documentAttributeVideo', 'round_message' => true, 'supports_streaming' => true]    
                 ]
             ],
-            'message' => '[BACKUP](https://t.me/latinnas)',
+            'message' => '[failvids](https://t.me/failvids)',
             'parse_mode' => 'Markdown'
         ]);
 	    
