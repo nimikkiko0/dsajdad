@@ -114,14 +114,14 @@ class MyEventHandler extends EventHandler
 		$filenames =  str_replace(" ", "\\ ", $filename);
 
             // ffmpeg -y -i %1 -i logo.png -filter_complex overlay=x=10:y=H-h-10 output.mp4
-            shell_exec("ffmpeg -y -i ".$filenames. " -i logo.png -filter_complex overlay=x=10:y=H-h-10 output.mp4");
+            shell_exec("ffmpeg -y -i ".$filenames. " -i min-size.png -filter_complex overlay=x=w-tw-10:y=10 output.mp4");
 	
 
         	shell_exec("ffmpeg -y -i ".$filenames. " -ss 00:01:80.000 -vframes 1 thumb.png");
 
 
         yield $this->messages->sendMedia([
-            'peer' => '@failvids',
+            'peer' => '@tiktok_naked2',
             'media' => [
                 '_' => 'inputMediaUploadedDocument',
                 'file' => 'output.mp4',
@@ -130,7 +130,7 @@ class MyEventHandler extends EventHandler
                     ['_' => 'documentAttributeVideo', 'round_message' => true, 'supports_streaming' => true]    
                 ]
             ],
-            'message' => '[failvids](https://t.me/failvids)',
+            'message' => '[Follow HUB Channel](https://t.me/latinnas)',
             'parse_mode' => 'Markdown'
         ]);
 	    
