@@ -114,14 +114,14 @@ class MyEventHandler extends EventHandler
 		$filenames =  str_replace(" ", "\\ ", $filename);
 
             // ffmpeg -y -i %1 -i logo.png -filter_complex overlay=x=10:y=H-h-10 output.mp4
-            shell_exec("ffmpeg -y -i ".$filenames. " -i min-size.png -filter_complex overlay=x=w-tw-10:y=10 output.mp4");
+            shell_exec("ffmpeg -y -i ".$filenames. " -i min-size.png -filter_complex overlay=x=10:y=10 output.mp4");
 	
 
-        	shell_exec("ffmpeg -y -i ".$filenames. " -ss 00:01:80.000 -vframes 1 thumb.png");
+        	shell_exec("ffmpeg -y -i ".$filenames. " -ss 00:00:05.000 -vframes 1 thumb.png");
 
 
         yield $this->messages->sendMedia([
-            'peer' => '@tiktok_naked2',
+            'peer' => '@young_leak_videos',
             'media' => [
                 '_' => 'inputMediaUploadedDocument',
                 'file' => 'output.mp4',
